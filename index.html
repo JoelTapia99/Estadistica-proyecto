@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <!-- Chart -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <div class="jumbotron">
+            <h1 class="display-4">Proyecto de Estadistica Descriptiva</h1>
+            <hr class="my-4">
+
+            <!-- contenedor del ingreso de datos -->
+            <div class="container mt-3">
+                <form>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Datos: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-outline-success"
+                                onclick="extraerDatos();">Calcular</button>
+                        </div>
+                    </div>
+                </form>
+
+                <hr class="my-4">
+
+                <!-- salida de datos -->
+                <div class="card">
+                    <p id="datos"> DATOS:</p>
+                </div>
+
+                <hr>
+
+
+                <!-- visualizacion de datos -->
+                <p>
+                    <strong id="moda">Moda:</strong>
+                </p>
+                <p>
+                    <strong id="media">Media:</strong>
+                </p>
+                <p>
+                    <strong id="mediana">Mediana:</strong>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- pie de pagina -->
+    <nav class="navbar navbar-dark bg-dark justify-content-center fixed-bottom">
+        <a class="navbar-brand"> <b>Desarolladores:</b> </a>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"> Flores Danny </li>
+            <li class="list-group-item"> Osorio Carlos </li>
+            <li class="list-group-item"> Tapia Kevin </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script src="/main.js"></script>
