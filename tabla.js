@@ -1,9 +1,12 @@
 // obtengo la variable 'datos' del archivo main.js
+var tabla = [document.getElementById('tabla')];
 
-document.getElementById('tabla').innerHTML = `<tr>
-<th scope="row">1</th>
-<td>ejemplo</td>
-<td>ejemplo</td>
-<td>ejemplo</td>
-<td>ejemplo</td>
-</tr>`;
+function mostrarDatosTabla(){
+    for (let i = 0; i < datos.length; i++) {
+    
+        tabla.appendChild();
+
+        //aqui va eso :v
+        
+    }
+}

@@ -105,5 +105,7 @@ function extraerDatos() {
 
     }
 
+    mostrarDatosTabla();
+
 }
 
