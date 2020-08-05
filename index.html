@@ -16,16 +16,15 @@
 <body>
 
     <div class="container mt-5">
-
         <div class="jumbotron">
             <h1 class="display-4">Proyecto de Estadistica Descriptiva</h1>
             <hr class="my-4">
 
-            <!-- contenedor del ingreso de datos -->
+            <!-- Contenedor del ingreso de datos -->
             <div class="container mt-3">
                 <form>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Datos: </label>
+                        <label class="col-sm-2 col-form-label">Ingrese los datos: </label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control">
                         </div>
@@ -35,86 +34,62 @@
                     </div>
                 </form>
 
-                <div class="container" id="alert">
-
-                </div>
-
+                <!-- Alerta de error, al ingresar datos -->
+                <div class="container" id="alert"></div>
                 <hr class="my-4">
 
-                <!-- salida de datos -->
-                <div class="card">
-                    <p class="salida" id="datos"> </p>
-                </div>
-
-                <hr>
-
-
-                <!-- visualizacion de datos -->
-                <p>
-                    <strong id="moda">Moda: </strong>
-                </p>
-                <p>
-                    <strong id="media">Media:</strong>
-                </p>
-                <p>
-                    <strong id="mediana">Mediana:</strong>
-                </p>
-
+                <!-- Salida de datos ordenados -->
+                <p class="salida"><strong id="datos"></strong></p>
             </div>
         </div>
-
     </div>
 
+    <!-- Tabla de datos -->
     <div class="container">
         <div class="jumbotron">
-        <h2 class="center">Tabla de frecuencias</h2>
-        
-        <hr>
-
+            <h2 class="center">Tabla de frecuencias</h2>
+            <hr>
             <table class="table">
                 <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">Datos</th>
-                    <th scope="col">f</th>
-                    <th scope="col">fa</th>
-                    <th scope="col">fr</th>
-                    <th scope="col">f%</th>
-                  </tr>
+                    <tr>
+                        <th scope="col">Datos</th>
+                        <th scope="col">F. Absoluta</th>
+                        <th scope="col">F. Acumulada</th>
+                        <th scope="col">F. Relativa</th>
+                        <th scope="col">F. Porcentual</th>
+                    </tr>
                 </thead>
-                <tbody id="tabla">
-                  <!-- <tr>
-                    <th scope="row">1</th>
-                    <td>ejemplo</td>
-                    <td>ejemplo</td>
-                    <td>ejemplo</td>
-                    <td>ejemplo</td>
-                  </tr> -->
-                </tbody>
-              </table>
-              
-              
+                <tbody id="table-body"></tbody>
+            </table>
         </div>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <!-- Medidas de tendencia central -->
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Medidas de tendencia central</h2>
+            <hr>
+            <p><strong id="moda">Moda:</strong></p>
+            <p><strong id="media">Media:</strong></p>
+            <p><strong id="mediana">Mediana:</strong></p>
+        </div>
+    </div>
 
     <!-- pie de pagina -->
-    <nav class="navbar navbar-dark bg-dark justify-content-center fixed-bottom">
+    <nav class="navbar navbar-dark bg-dark justify-content-center">
         <div class="row-6">
             <a class="navbar-brand"> <b>Desarrolladores:</b> Flores Danny, Osorio Carlos, Tapia Kevin </a>
         </div>
         <div class="row-6">
             <a href="https://github.com/JoelTapia99/Estadistica-proyecto" class="alert-link">Código fuente</a>
         </div>
-
     </nav>
+    
 </body>
 
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 <script src="/main.js"></script>
+<script src="/ordenamiento.js"></script>
+<script src="/tendencia_central.js"></script>
 <script src="/tabla.js"></script>
