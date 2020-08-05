@@ -82,12 +82,13 @@ function extraerDatos() {
     datos = [];
     let datos_input = document.querySelector('input');
     datos_locales = datos_input.value.split(',');
-
+    
+    
     for (let i = 0; i < datos_locales.length; i++) {
         if (Number(datos_locales[i]) >= 0) {
             datos.push(Number(datos_locales[i]));
             selectionSort(datos);
-
+            
             document.getElementById('datos').innerText = `DATOS: [${datos}]`;
             document.getElementById('mediana').innerText = `Mediana: ${calcularMediana()}`;
             document.getElementById('media').innerText = `Media: ${calcularMedia()}`;
@@ -105,3 +106,4 @@ function extraerDatos() {
     }
 
 }
+
