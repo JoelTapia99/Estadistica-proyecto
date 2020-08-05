@@ -30,17 +30,20 @@
                             <input type="text" class="form-control">
                         </div>
                         <div class="col-sm-2">
-                            <button type="button" class="btn btn-outline-success"
-                                onclick="extraerDatos();">Calcular</button>
+                            <button type="button" class="btn btn-success" onclick="extraerDatos();">Calcular</button>
                         </div>
                     </div>
                 </form>
+
+                <div class="container" id="alert">
+
+                </div>
 
                 <hr class="my-4">
 
                 <!-- salida de datos -->
                 <div class="card">
-                    <p id="datos"> DATOS:</p>
+                    <p class="salida" id="datos"> </p>
                 </div>
 
                 <hr>
@@ -48,7 +51,7 @@
 
                 <!-- visualizacion de datos -->
                 <p>
-                    <strong id="moda">Moda:</strong>
+                    <strong id="moda">Moda: </strong>
                 </p>
                 <p>
                     <strong id="media">Media:</strong>
@@ -70,12 +73,10 @@
 
     <!-- pie de pagina -->
     <nav class="navbar navbar-dark bg-dark justify-content-center fixed-bottom">
-        <a class="navbar-brand"> <b>Desarolladores:</b> </a>
-        <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"> Flores Danny </li>
-            <li class="list-group-item"> Osorio Carlos </li>
-            <li class="list-group-item"> Tapia Kevin </li>
-        </ul>
+        <div class="row">
+            <a class="navbar-brand"> <b>Desarrolladores:</b> Flores Danny, Osorio Carlos, Tapia Kevin </a>
+        </div>
+
     </nav>
 </body>
 
