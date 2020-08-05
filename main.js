@@ -17,18 +17,26 @@ function calcularMediana(){
 }
 
 function calcularModa(){
-    let conjunto = [];
+    let numero=[];
+    let moda=[];
+    let auxiliar = 0;
     
-    let anterior = 0;
-    let siguiente = 0;
     for (let i = 0; i < datos.length; i++) {
-        let moda=0;
-        if ( i < datos.length )
-        if( datos[i] == datos[i+1]){
-            conjunto = push(i);
-        }
+        numero = datos.filter( num => num == datos[i] );
+
+        if ( numero.length > auxiliar ) {
+            auxiliar = numero.length;
+            moda = numero;
+        } 
     }
-    console.log(conjunto);
+    console.log( `numero: ${moda[0]}  auxiliar: ${auxiliar}` );
+}
+
+
+function ordenar( array ){
+
+    
+
 }
 
 
@@ -39,16 +47,14 @@ function extraerDatos(){
     datos_locales = datos_input.value.split(',');
 
     for (let i = 0; i < datos_locales.length; i++){
-        datos.push(parseFloat(datos_locales[i]));
+        datos.push(Number(datos_locales[i]));
     }
+
+    datos.sort();
 
     document.getElementById('datos').innerText = `DATOS: [${datos}]`;
     document.getElementById('mediana').innerText = `Mediana: ${calcularMediana()}`;
     document.getElementById('media').innerText = `Media: ${calcularMedia()}`;
 
     calcularModa();
-}
-
-function main(){
-    
 }
