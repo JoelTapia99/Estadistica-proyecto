@@ -36,7 +36,7 @@ function mostrarDatosTabla(datos){
             .innerHTML += `<tr><td>${datos_agrupados[i].dato}</td>
                             <td>${datos_agrupados[i].frecuencia}</td>
                             <td>${calcularFrecuenciaAcumulada(datos_agrupados[i].frecuencia)}</td>
-                            <td>${calcularFrecuenciaRelativa(datos_agrupados[i].frecuencia, datos)}</td>
-                            <td>${calcularFrecuenciaPorcentual(calcularFrecuenciaRelativa(datos_agrupados[i].frecuencia, datos))}%</td></tr>`;   
+                            <td>${ Math.round(calcularFrecuenciaRelativa(datos_agrupados[i].frecuencia, datos)*1000)/1000}</td>
+                            <td>${Math.round(calcularFrecuenciaPorcentual(calcularFrecuenciaRelativa(datos_agrupados[i].frecuencia, datos))*100)/100} %</td></tr>`;   
     }
 }
