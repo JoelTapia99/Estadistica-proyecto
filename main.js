@@ -24,5 +24,7 @@ function extraerDatos() {
     document.getElementById('alert').innerHTML = '';
 
     mostrarDatosTabla(datos);
+    graficar();
+    graficarPuntos();
 }
 
