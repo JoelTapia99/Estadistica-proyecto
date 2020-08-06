@@ -6,12 +6,12 @@ function extraerDatos() {
     datos_input = document.querySelector('input').value.split(',');
     
     for (let i = 0; i < datos_input.length; i++) {
-        if (Number(datos_input[i]) >= 0) {
-            datos.push(Number(datos_input[i]));
-        } else {
+        if (isNaN(Number(datos_input[i]))) {
             document.getElementById('alert').innerHTML = `<div class="alert alert-warning" role="alert">
                                                         Datos no válidos.</div>`;
             return 0;
+        } else {
+            datos.push(Number(datos_input[i]));
         }
     }
 

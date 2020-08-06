@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto</title>
+    <title>Estadística Descriptiva</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
@@ -18,7 +18,7 @@
     <!-- navbar -->
 
     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top fondoNav">
-        <a class="navbar-brand" href="#contenedor-ingreso-datos">Proyecto</a>
+        <a class="navbar-brand" href="#contenedor-ingreso-datos">Estadística Descriptiva</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,13 +26,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#contenedor-ingreso-datos">Ingreso</a>
+              <a class="nav-link" href="#contenedor-ingreso-datos">Ingresar datos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contenedor-tabla-datos">Tabla</a>
+              <a class="nav-link" href="#contenedor-tabla-datos">Tabla de frecuencia</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#contenedor-medidas-datos">Medida</a>
+                <a class="nav-link" href="#contenedor-medidas-datos">Medidas de tendencia central</a>
               </li>
           </ul>
           
@@ -52,9 +52,9 @@
             <div class="container mt-3">
                 <form>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Ingrese los datos: </label>
+                        <label class="col-sm-2 col-form-label">Ingrese los datos:</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" placeholder="Ejemplo: 1,2,2,3">
                         </div>
                         <div class="col-sm-2">
                             <button type="button" class="btn btn-success" onclick="extraerDatos();">Calcular</button>
@@ -117,11 +117,8 @@
 
 </html>
 
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 <script src="/main.js"></script>
 <script src="app/ordenamiento.js"></script>
 <script src="app/tendencia_central.js"></script>
 <script src="app/tabla.js"></script>
-

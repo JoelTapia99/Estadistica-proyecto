@@ -16,28 +16,25 @@ function calcularMediana(datos) {
 
 function calcularModa(datos) {
     let numerosFiltrados = [];
-    let moda;
+    let moda = [];
     let frecuencia = 0;
 
     for (let i = 0; i < datos.length; i++) {
         numerosFiltrados = datos.filter(num => num == datos[i]);
-
-        if (numerosFiltrados.length >= frecuencia) {
+        if (numerosFiltrados.length > frecuencia) {
             frecuencia = numerosFiltrados.length;
-            moda = numerosFiltrados[0];
-            //moda.push(numerosFiltrados[0]);
+            moda = [];
+            moda.push(numerosFiltrados[0]);
+        }
+        if(numerosFiltrados.length == frecuencia){
+            if(!moda.find(num => num == numerosFiltrados[0])){
+                moda.push(numerosFiltrados[0]);
+            }
         }
     }
 
     if (frecuencia > 1) {
-        /*
-        let modaTotal = '';
-        for (let i = 0; i < moda.length; i += frecuencia) {
-            modaTotal += `${moda[i]}, `;
-        }
-        return `${modaTotal} Frecuencia: ${frecuencia}`;
-        */
-       return `${moda} Frecuencia: ${frecuencia}`;
+       return `${moda} - (veces que se repite: ${frecuencia})`;
     } else {
         return 'No existen valores repetidos.';
     }
