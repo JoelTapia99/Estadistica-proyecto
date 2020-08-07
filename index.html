@@ -27,6 +27,9 @@
                     <a class="nav-link" href="#contenedor-tabla-datos">Tabla de frecuencia</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#contenedor-grafica-datos">Gráficos estadísticos</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#contenedor-medidas-datos">Medidas de tendencia central</a>
                 </li>
             </ul>
@@ -85,6 +88,15 @@
         </div>
     </div>
 
+    <!--Gafrico de puntos -->
+    <div class="container" id="contenedor-grafica-datos">
+        <div class="jumbotron">
+            <h2 class="center">Grafico de líneas</h2>
+            <hr>
+            <canvas id="grafico-lineas" width="75" height="50"></canvas>
+        </div>
+    </div>
+
     <!-- Medidas de tendencia central -->
     <div class="container" id="contenedor-medidas-datos">
         <div class="jumbotron">
@@ -95,27 +107,6 @@
             <p><strong id="mediana">Mediana:</strong></p>
         </div>
     </div>
-    
-            
-        </div>
-    </div>
-    <!--Gafrico -->
-    <div class="container" id="contenedor-tabla-datos">
-        <div class="jumbotron">
-            <h2 class="center">Grafico</h2>
-            <hr>
-            <canvas id="myChart" width="600" height="400"></canvas>
-        </div>
-    </div>
-     <!--Gafrico de Puntos -->
-    <div class="container" id="contenedor-tabla-datos">
-        <div class="jumbotron">
-            <h2 class="center">Grafico de Puntos</h2>
-            <hr>
-            <canvas id="myC" width="600" height="400"></canvas>
-        </div>
-    </div>
-    
 
     <!-- pie de pagina -->
     <nav class="navbar navbar-dark bg-dark justify-content-center">
@@ -138,5 +129,4 @@
 <script src="app/ordenamiento.js"></script>
 <script src="app/tendencia_central.js"></script>
 <script src="app/tabla.js"></script>
-<script src="app/grafico.js"></script>
-<script src="app/graficoPuntos.js"></script>
+<script src="app/graficos.js"></script>

@@ -1,36 +1,29 @@
-var datosGrafico = [];
+function graficarDiagramaLineas(datos_agrupados) {
 
-
-function graficarPuntos() {
-
-    datosGrafico = datos_agrupados;
     let datos = [];
     let frecuencia = [];
 
-    for (let i = 0; i < datosGrafico.length; i++) {
-        datos.push(datosGrafico[i].dato);
-        frecuencia.push(datosGrafico[i].frecuencia);
-        console.log(datos);
-        console.log(frecuencia);
-        
+    for (let i = 0; i < datos_agrupados.length; i++) {
+        datos.push(datos_agrupados[i].dato);
+        frecuencia.push(datos_agrupados[i].frecuencia);
     }
-    console.log(datosGrafico);
 
-    var ctx = document.getElementById('myC').getContext('2d');
+    var ctx = document.getElementById('grafico-lineas').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: datos,
             datasets: [{
-                label: "Grafico de Puntos",
-                data: datos,
+                label: 'Grafico de puntos',
+                data: frecuencia,
                 lineTension: 0,
                 fill: false,
-                borderColor: 'orange',
+                showLine: false,
+                borderColor: 'blue',
                 backgroundColor: 'transparent',
                 borderDash: [5, 5],
-                pointBorderColor: 'orange',
-                pointBackgroundColor: 'rgba(255,150,0,0.5)',
+                pointBorderColor: 'blue',
+                pointBackgroundColor: 'blue',
                 pointRadius: 5,
                 pointHoverRadius: 10,
                 pointHitRadius: 30,
@@ -48,6 +41,4 @@ function graficarPuntos() {
             }
         }
     });
-
-
 }
