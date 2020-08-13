@@ -2,9 +2,8 @@ var datos;
 var datos_agrupados;
 
 function extraerDatos() {
-    let datos_input = [];
+    let datos_input = document.querySelector('textarea').value.split(',');
     datos = [];
-    datos_input = document.querySelector('input').value.split(',');
     
     for (let i = 0; i < datos_input.length; i++) {
         if (isNaN(Number(datos_input[i]))) {
@@ -33,13 +32,27 @@ function extraerDatos() {
 
 function agruparDatos(){
     datos_agrupados = [];
-    for (let i = 0; i < datos.length; i++){
-        if(!datos_agrupados.find(num => num.dato == datos[i] )){
-            datos_agrupados.push({
-                dato: datos.find(num => num == datos[i]),
-                frecuencia: datos.filter(num => num == datos[i]).length
-            });   
-        }
-    }
-}
+    if (datos.length >= 20){
+        let rango = datos[datos.length-1] - datos[0];
+        let numero_intervalos = Math.round(Math.sqrt(datos.length));
+        let amplitud = Math.round(rango/numero_intervalos);
+        let intervalo = datos[0] - Math.abs(rango - (numero_intervalos * amplitud));
 
+        for (let i = 0; i < numero_intervalos; i++){
+            datos_agrupados.push({
+                dato: `[${intervalo} - ${intervalo + amplitud}]`,
+                frecuencia: datos.filter(num => (num >= intervalo && num <= intervalo + amplitud)).length
+            });
+            intervalo = intervalo + 1 + amplitud;
+        }
+    } else {
+        for (let i = 0; i < datos.length; i++){
+            if(!datos_agrupados.find(num => num.dato == datos[i])){
+                datos_agrupados.push({
+                    dato: datos.find(num => num == datos[i]),
+                    frecuencia: datos.filter(num => num == datos[i]).length
+                });   
+            }
+        }
+    } 
+}
