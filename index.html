@@ -32,6 +32,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contenedor-medidas-datos">Medidas de tendencia central</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contenedor-medidas-dispersion">Medidas de dispersión</a>
+                </li>
             </ul>
 
         </div>
@@ -91,7 +94,7 @@
     <!--Gafrico de puntos -->
     <div class="container" id="contenedor-grafica-datos">
         <div class="jumbotron">
-            <h2 class="center">Grafico de líneas</h2>
+            <h2 class="center">Grafico de puntos</h2>
             <hr>
             <canvas id="grafico-lineas" width="75" height="50"></canvas>
         </div>
@@ -105,6 +108,16 @@
             <p><strong id="moda">Moda:</strong></p>
             <p><strong id="media">Media:</strong></p>
             <p><strong id="mediana">Mediana:</strong></p>
+        </div>
+    </div>
+
+    <!-- Medidas de dispersión -->
+    <div class="container" id="contenedor-medidas-dispersión">
+        <div class="jumbotron">
+            <h2>Medidas de dispersión</h2>
+            <hr>
+            <p><strong id="desviacion">Desviación Estandar:</strong></p>
+            <p><strong id="varianza">Varianza:</strong></p>
         </div>
     </div>
 
@@ -130,3 +143,4 @@
 <script src="app/tendencia_central.js"></script>
 <script src="app/tabla.js"></script>
 <script src="app/graficos.js"></script>
+<script src="app/dispersion.js"></script>

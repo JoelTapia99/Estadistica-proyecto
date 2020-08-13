@@ -22,6 +22,8 @@ function extraerDatos() {
     document.getElementById('mediana').innerText = `Mediana: ${calcularMediana(datos)}`;
     document.getElementById('media').innerText = `Media: ${calcularMedia(datos)}`;
     document.getElementById('moda').innerText = `Moda: ${calcularModa(datos)}`;
+    document.getElementById('desviacion').innerText = `Desviación Estandar: ${calcularDesviacionEstandar(datos, calcularMedia(datos))}`;
+    document.getElementById('varianza').innerText = `Varianza: ${calcularVarianza(datos, calcularMedia(datos))}`;
     document.getElementById('alert').innerHTML = '';
 
     agruparDatos();
