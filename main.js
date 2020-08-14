@@ -29,7 +29,7 @@ function extraerDatos() {
     agruparDatos();
     mostrarDatosTabla(datos_agrupados, datos.length);
     graficarDiagramaLineas(datos_agrupados);
-    mostrarTallosHojas(datos);
+    mainTallosHojas(datos);
 }
 
 function agruparDatos(){

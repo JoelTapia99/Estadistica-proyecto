@@ -1,12 +1,28 @@
+
+//variables para datos sin hojas
 var talloSinHojas = [];
+var exiteTalloSinHojas = false;
 
-var tallos = [];
-var hojas = [];
+//variables para datos con hojas
+var tallosConHojas = [];
+var tallos, hojas = [];
 
-function mostrarTallosHojas(datos) {
+function mainTallosHojas(datos) {
 
     tallos = [];
     hojas = [];
+    talloSinHojas = [];
+    exiteTalloSinHojas = false;
+
+    clasificarDatos(datos);
+    agruparNumerosDecimales(tallos, hojas);
+    graficarTallosSinHojas();
+    graficarTallosConHojas();
+    
+}
+
+function clasificarDatos(datos) {
+
     let datosString = [];
 
     document.getElementById('cuerpo-tallos').innerHTML = '';
@@ -18,6 +34,7 @@ function mostrarTallosHojas(datos) {
         if (datosString[i].length < 2) {
 
             talloSinHojas.push(datosString[i]);
+            exiteTalloSinHojas = true;
 
         } else if (datosString[i].length > 1) {
 
@@ -27,15 +44,11 @@ function mostrarTallosHojas(datos) {
 
     }
 
-    varidarTallosRepetidos();
-    graficarTallosHojas();
-    graficarTallosSinHojas();
-
 }
 
 function numerosDecimales(dato) {
-    let auxiliarTallo = '';
-    let auxiliarHoja = '';
+    let auxiliarTallo = [];
+    let auxiliarHoja = [];
     let esTallos = true;
 
     for (let i = 0; i < dato.length; i++) {
@@ -63,6 +76,34 @@ function numerosDecimales(dato) {
 
 }
 
+function agruparNumerosDecimales(tallos, hojas) {
+
+    console.log(`tallo ingresado ${tallos}`);
+    console.log(`hoja ingresado ${hojas}`);
+
+
+    for (let i = 0; i < tallos.length; i++) {
+
+        let totalHoja = '';
+        let posicion = 0;
+
+        let dato = tallosConHojas.find(elem => elem.tallo == tallos[i]);
+
+        if ( dato == undefined) {
+            tallosConHojas.push({
+                tallo: tallos[i],
+                hojas: hojas[i]
+            })
+        } else {
+            dato.tallo = tallos[i];
+            dato.hojas += ` - ${hojas[i]}`
+        }
+
+    }   
+
+    console.log(tallosConHojas);
+}
+
 function graficarTallosSinHojas() {
 
     document.getElementById('datos-sin-tallos').innerHTML = '';
@@ -70,24 +111,31 @@ function graficarTallosSinHojas() {
 
     let datos = talloSinHojas.join(', ');
 
-    document.getElementById('datos-sin-tallos')
-        .innerHTML += `<div class='alert alert-success role='alert'>
-        <h4 class='alert-heading'>Datos sin tallos.</h4>
+    if (exiteTalloSinHojas == true) {
+        document.getElementById('datos-sin-tallos')
+            .innerHTML += `<div class='alert alert-light role='alert'>
+        <h4 class='alert-heading'><b>Datos sin tallos.</b></h4>
         <hr>
-        <p> ${datos} </p>
+        <p> <b>${datos}</b> </p>
         </div>`;
+    } else {
+
+        document.getElementById('datos-sin-tallos').innerHTML = '<p></p>';
+
+    }
+
+
 }
 
-function graficarTallosHojas() {
+function graficarTallosConHojas() {
 
 
     document.getElementById('cuerpo-tallos').innerHTML = '';
 
-    for (let i = 0; i < tallos.length; i++) {
-
+    for (const item of tallosConHojas) {
         document.getElementById('cuerpo-tallos')
-            .innerHTML += `<tr><td>${tallos[i]}</td>
-                                                        <td>${hojas[i]}</td></tr>`;
+            .innerHTML += `<tr><td>${item.tallo}</td>
+                            <td>${item.hojas}</td></tr>`;
     }
 
 }
