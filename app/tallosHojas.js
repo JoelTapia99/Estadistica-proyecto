@@ -78,14 +78,7 @@ function numerosDecimales(dato) {
 
 function agruparNumerosDecimales(tallos, hojas) {
 
-    console.log(`tallo ingresado ${tallos}`);
-    console.log(`hoja ingresado ${hojas}`);
-
-
     for (let i = 0; i < tallos.length; i++) {
-
-        let totalHoja = '';
-        let posicion = 0;
 
         let dato = tallosConHojas.find(elem => elem.tallo == tallos[i]);
 
@@ -101,12 +94,12 @@ function agruparNumerosDecimales(tallos, hojas) {
 
     }   
 
-    console.log(tallosConHojas);
 }
 
 function graficarTallosSinHojas() {
 
     document.getElementById('datos-sin-tallos').innerHTML = '';
+
     selectionSort(talloSinHojas);
 
     let datos = talloSinHojas.join(', ');
@@ -124,11 +117,9 @@ function graficarTallosSinHojas() {
 
     }
 
-
 }
 
 function graficarTallosConHojas() {
-
 
     document.getElementById('cuerpo-tallos').innerHTML = '';
 
