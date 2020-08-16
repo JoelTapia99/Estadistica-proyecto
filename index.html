@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadística Descriptiva</title>
-    <!-- bootstrap -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
     <!-- Estilos -->
@@ -27,6 +27,9 @@
                     <a class="nav-link" href="#contenedor-tabla-datos">Tabla de frecuencia</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#contenedor-tallos-hojas">Gráfico de tallos y hojas</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#contenedor-grafica-datos">Gráficos estadísticos</a>
                 </li>
                 <li class="nav-item">
@@ -34,9 +37,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contenedor-medidas-dispersion">Medidas de dispersión</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contenedor-tallos-hojas">Medidas de dispersión</a>
                 </li>
             </ul>
 
@@ -94,12 +94,30 @@
         </div>
     </div>
 
-    <!--Gráfico de puntos -->
+    <!-- Gráfico de puntos -->
     <div class="container" id="contenedor-grafica-datos">
         <div class="jumbotron">
             <h2 class="center">Gráfico de puntos</h2>
             <hr>
             <canvas id="grafico-puntos" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <!-- Histograma -->
+    <div class="container" id="contenedor-grafica-datos">
+        <div class="jumbotron">
+            <h2 class="center">Histograma</h2>
+            <hr>
+            <canvas id="histograma" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <!-- Diagrama de caja -->
+    <div class="container" id="contenedor-grafica-datos">
+        <div class="jumbotron">
+            <h2 class="center">Diagrama de caja</h2>
+            <hr>
+            <canvas id="diagrama-caja" width="400" height="200"></canvas>
         </div>
     </div>
 
@@ -123,15 +141,14 @@
             <p><strong id="varianza">Varianza:</strong></p>
         </div>
     </div>
+
     <!-- diagrama de tallo y hojas -->
     <div class="container" id="contenedor-tallos-hojas">
         <div class="jumbotron">
             <h2>Gráfico de tallos y hojas.</h2>
             <hr>
 
-            <div class="container" id="datos-sin-tallos">
-
-            </div>
+            <div class="container" id="datos-sin-tallos"></div>
 
             <table class="table">
                 <thead class="thead-dark" id="cabecera-tallos">
@@ -157,10 +174,6 @@
             <a href="https://github.com/JoelTapia99/Estadistica-proyecto" class="alert-link">Código fuente</a>
         </div>
     </nav>
-<<<<<<< HEAD
-
-=======
->>>>>>> f15686880b9066f8a5b5a893e7b51cbf690a4b97
 
 </body>
 
@@ -174,4 +187,4 @@
 <script src="app/tabla.js"></script>
 <script src="app/graficos.js"></script>
 <script src="app/dispersion.js"></script>
-<script src="app/tallosHojas.js"></script>
+<script src="app/tallos_hojas.js"></script>

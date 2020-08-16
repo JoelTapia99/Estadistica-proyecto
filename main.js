@@ -28,6 +28,8 @@ function extraerDatos() {
     agruparDatos();
     mostrarDatosTabla(datos_agrupados, datos.length);
     graficarDiagramaLineas(datos_agrupados);
+    graficarHistograma(datos_agrupados);
+    graficarDiagramaCaja(datos, datos.length);
     mainTallosHojas(datos);
 }
 
