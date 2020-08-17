@@ -1,4 +1,3 @@
-
 //variables para datos sin hojas
 var talloSinHojas = [];
 var exiteTalloSinHojas = false;
@@ -24,8 +23,6 @@ function mainTallosHojas(datos) {
 function clasificarDatos(datos) {
 
     let datosString = [];
-
-    document.getElementById('cuerpo-tallos').innerHTML = '';
 
     for (let i = 0; i < datos.length; i++) {
 
@@ -55,13 +52,10 @@ function numerosDecimales(dato) {
 
         if (isNaN(Number(dato[i]))) {
             esTallos = false;
-            console.log(isNaN(dato[i]));
         }
 
         if (esTallos == true) {
-
             auxiliarTallo += dato[i];
-
         } else {
 
             if (!(dato[i] == '.')) {
@@ -104,7 +98,7 @@ function graficarTallosSinHojas() {
 
     let datos = talloSinHojas.join(', ');
 
-    if (exiteTalloSinHojas == true) {
+    if (exiteTalloSinHojas) {
         document.getElementById('datos-sin-tallos')
             .innerHTML += `<div class='alert alert-light role='alert'>
         <h4 class='alert-heading'><b>Datos sin tallos.</b></h4>
@@ -120,7 +114,6 @@ function graficarTallosSinHojas() {
 }
 
 function graficarTallosConHojas() {
-
     document.getElementById('cuerpo-tallos').innerHTML = '';
 
     for (const item of tallosConHojas) {

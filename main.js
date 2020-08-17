@@ -1,8 +1,17 @@
 var datos;
 var datos_agrupados;
+var bdd = window.localStorage;
+
+window.onload = function (){
+    if(bdd.getItem('datos')){
+        document.querySelector('textarea').value = bdd.getItem('datos');
+        extraerDatos();
+    }
+}
 
 function extraerDatos() {
     let datos_input = document.querySelector('textarea').value.split(',');
+    bdd.setItem('datos', datos_input);
     datos = [];
     
     for (let i = 0; i < datos_input.length; i++) {
@@ -58,4 +67,11 @@ function agruparDatos(){
             }
         }
     } 
+}
+
+function limpiar(){
+    document.querySelector('textarea').value = '';
+    datos = [];
+    datos_agrupados = [];
+    bdd.removeItem('datos');
 }
