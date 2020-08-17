@@ -21,22 +21,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#contenedor-ingreso-datos">Ingresar datos</a>
+                    <a class="nav-link" href="#contenedor-ingreso-datos">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contenedor-tabla-datos">Tabla de frecuencia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contenedor-tallos-hojas">Gráfico de tallos y hojas</a>
+                    <a class="nav-link" href="#contenedor-tabla-datos">Tablas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contenedor-grafica-datos">Gráficos estadísticos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contenedor-medidas-datos">Medidas de tendencia central</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contenedor-medidas-dispersion">Medidas de dispersión</a>
+                    <a class="nav-link" href="#contenedor-medidas-datos">Cálculos</a>
                 </li>
             </ul>
 
@@ -53,21 +47,10 @@
             <!-- Contenedor del ingreso de datos -->
             <div class="container mt-3">
                 <form>
-<<<<<<< HEAD
                     <div class="form-group">
                         <label for="input-data">Ingrese los datos:</label>
                         <textarea class="form-control" id="input-data" aria-describedby="data-help"></textarea>
                         <small id="data-help" class="form-text text-muted">Utilice la coma ( , ) para separar cada dato, de esta forma: 1,2,3,3,4,5,...</small>
-=======
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Ingrese los datos:</label>
-                        <div class="col-sm-7">
-                            <textarea class="form-control" rows="1" placeholder="Ejemplo: 1,2,2,3"></textarea>
-                        </div>
-                        <div class="col-sm-3">
-                            <button type="button" class="btn btn-success" onclick="extraerDatos();">Calcular</button>
-                        </div>
->>>>>>> 0f5b4363fcb0f701ed366347b204855b04f96d39
                     </div>
                     <button type="button" class="btn btn-success" onclick="extraerDatos();">Calcular</button>
                     <button type="button" class="btn btn-danger" onclick="limpiar();">Limpiar</button>
