@@ -16,7 +16,7 @@
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top fondoNav">
-        <a class="navbar-brand" href="#">Estadística Descriptiva</a>
+        <span><img src="/assets/LogoBuenoBenitoJuarez.png" class="rounded mx-auto d-block" alt="Logo Benito Juárez"></span>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -43,7 +43,7 @@
         </div>
     </nav>
 
-    <br>
+    <br><br><br>
 
     <div class="container mt-5" id="contenedor-ingreso-datos">
         <div class="jumbotron">
@@ -53,10 +53,21 @@
             <!-- Contenedor del ingreso de datos -->
             <div class="container mt-3">
                 <form>
+<<<<<<< HEAD
                     <div class="form-group">
                         <label for="input-data">Ingrese los datos:</label>
                         <textarea class="form-control" id="input-data" aria-describedby="data-help"></textarea>
                         <small id="data-help" class="form-text text-muted">Utilice la coma ( , ) para separar cada dato, de esta forma: 1,2,3,3,4,5,...</small>
+=======
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Ingrese los datos:</label>
+                        <div class="col-sm-7">
+                            <textarea class="form-control" rows="1" placeholder="Ejemplo: 1,2,2,3"></textarea>
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="button" class="btn btn-success" onclick="extraerDatos();">Calcular</button>
+                        </div>
+>>>>>>> 0f5b4363fcb0f701ed366347b204855b04f96d39
                     </div>
                     <button type="button" class="btn btn-success" onclick="extraerDatos();">Calcular</button>
                     <button type="button" class="btn btn-danger" onclick="limpiar();">Limpiar</button>
@@ -149,10 +160,10 @@
 
             <table class="table">
                 <thead class="thead-dark" id="cabecera-tallos">
-                    <tr>
+                    <!-- <tr>
                         <th scope="col">Tallos</th>
                         <th scope="col">Hojas</th>
-                    </tr>
+                    </tr> -->
                 </thead>
                 <tbody id="cuerpo-tallos"></tbody>
             </table>
@@ -162,7 +173,7 @@
     <!-- pie de pagina -->
     <nav class="navbar navbar-dark bg-dark justify-content-center">
         <div class="col-12 mt-2 mb-2">
-            <img src="/assets/LogoBuenoBenitoJuarez.png" class="rounded mx-auto d-block" alt="Logo Benito Juárez">
+            
         </div>
         <div class="row-6">
             <a class="navbar-brand"> <b>Desarrolladores:</b> Flores Danny, Osorio Carlos, Tapia Kevin </a>

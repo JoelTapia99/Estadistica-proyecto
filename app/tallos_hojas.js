@@ -11,13 +11,14 @@ function mainTallosHojas(datos) {
     tallos = [];
     hojas = [];
     talloSinHojas = [];
+    tallosConHojas = [];
     exiteTalloSinHojas = false;
 
     clasificarDatos(datos);
     agruparNumerosDecimales(tallos, hojas);
     graficarTallosSinHojas();
     graficarTallosConHojas();
-    
+
 }
 
 function clasificarDatos(datos) {
@@ -76,7 +77,7 @@ function agruparNumerosDecimales(tallos, hojas) {
 
         let dato = tallosConHojas.find(elem => elem.tallo == tallos[i]);
 
-        if ( dato == undefined) {
+        if (dato == undefined) {
             tallosConHojas.push({
                 tallo: tallos[i],
                 hojas: hojas[i]
@@ -86,7 +87,7 @@ function agruparNumerosDecimales(tallos, hojas) {
             dato.hojas += ` - ${hojas[i]}`
         }
 
-    }   
+    }
 
 }
 
@@ -115,11 +116,23 @@ function graficarTallosSinHojas() {
 
 function graficarTallosConHojas() {
     document.getElementById('cuerpo-tallos').innerHTML = '';
+    document.getElementById('cabecera-tallos').innerHTML = '';
 
-    for (const item of tallosConHojas) {
-        document.getElementById('cuerpo-tallos')
-            .innerHTML += `<tr><td>${item.tallo}</td>
-                            <td>${item.hojas}</td></tr>`;
+    if (tallosConHojas.length == 0) {
+        return 0;
+    } else {
+        document.getElementById('cabecera-tallos').innerHTML = `<tr>
+        <th scope="col">Tallos</th>
+        <th scope="col">Hojas</th>
+        </tr>`;
+
+        for (const item of tallosConHojas) {
+            document.getElementById('cuerpo-tallos')
+                .innerHTML += `<tr><td>${item.tallo}</td>
+                                <td>${item.hojas}</td></tr>`;
+        }
     }
+
+
 
 }
