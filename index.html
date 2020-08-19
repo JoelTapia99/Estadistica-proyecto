@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadística Descriptiva</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Estilos -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -16,7 +16,8 @@
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark  fixed-top fondoNav">
-        <span><img src="/assets/YAVIRAC.jpg" style="width: 8rem; height: 4rem;" class="rounded mx-auto d-block" alt="Logo Benito Juárez"></span>
+        <span><img src="/assets/YAVIRAC.jpg" style="width: 8rem; height: 4rem;" class="rounded mx-auto d-block"
+                alt="Logo Benito Juárez"></span>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -50,7 +51,8 @@
                     <div class="form-group">
                         <label for="input-data">Ingrese los datos:</label>
                         <textarea class="form-control" id="input-data" aria-describedby="data-help"></textarea>
-                        <small id="data-help" class="form-text text-muted">Utilice la coma ( , ) para separar cada dato, de esta forma: 1,2,3,3,4,5,...</small>
+                        <small id="data-help" class="form-text text-muted">Utilice la coma ( , ) para separar cada dato,
+                            de esta forma: 1,2,3,3,4,5,...</small>
                     </div>
                     <button type="button" class="btn btn-success" onclick="extraerDatos();">Calcular</button>
                     <button type="button" class="btn btn-danger" onclick="limpiar();">Limpiar</button>
@@ -85,6 +87,47 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="jumbotron mt-0">
+
+            <ul class="nav nav-tabs mt-0" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#contenedor-medidas-datos"
+                        role="tab" aria-controls="home" aria-selected="true">Medidas de tendencia central</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#contenedor-medidas-dispersion"
+                        role="tab" aria-controls="profile" aria-selected="false">Medidas de dispersión</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="contenedor-medidas-datos" role="tabpanel"
+                    aria-labelledby="home-tab">
+                    <!-- Medidas de tendencia central -->
+                    <div class="jumbotron">
+                        <h2>Medidas de tendencia central</h2>
+                        <hr>
+                        <p><strong id="moda">Moda:</strong></p>
+                        <p><strong id="media">Media:</strong></p>
+                        <p><strong id="mediana">Mediana:</strong></p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="contenedor-medidas-dispersion" role="tabpanel"
+                    aria-labelledby="profile-tab">
+                    <!-- Medidas de dispersión -->
+                    <div class="jumbotron">
+                        <h2>Medidas de dispersión</h2>
+                        <hr>
+                        <p><strong id="desviacion">Desviación Estandar:</strong></p>
+                        <p><strong id="varianza">Varianza:</strong></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Gráfico de puntos -->
     <div class="container" id="contenedor-grafica-datos">
         <div class="jumbotron">
@@ -112,27 +155,6 @@
         </div>
     </div>
 
-    <!-- Medidas de tendencia central -->
-    <div class="container" id="contenedor-medidas-datos">
-        <div class="jumbotron">
-            <h2>Medidas de tendencia central</h2>
-            <hr>
-            <p><strong id="moda">Moda:</strong></p>
-            <p><strong id="media">Media:</strong></p>
-            <p><strong id="mediana">Mediana:</strong></p>
-        </div>
-    </div>
-
-    <!-- Medidas de dispersión -->
-    <div class="container" id="contenedor-medidas-dispersion">
-        <div class="jumbotron">
-            <h2>Medidas de dispersión</h2>
-            <hr>
-            <p><strong id="desviacion">Desviación Estandar:</strong></p>
-            <p><strong id="varianza">Varianza:</strong></p>
-        </div>
-    </div>
-
     <!-- diagrama de tallo y hojas -->
     <div class="container" id="contenedor-tallos-hojas">
         <div class="jumbotron">
@@ -156,7 +178,8 @@
     <!-- pie de pagina -->
     <nav class="navbar navbar-dark bg-dark justify-content-center">
         <div class="row-4 mt-2 mb-2 mr-5">
-            <span><img src="/assets/LogoBuenoBenitoJuarez.png"  class="rounded mx-auto d-block" alt="Logo Benito Juárez"></span>
+            <span><img src="/assets/LogoBuenoBenitoJuarez.png" class="rounded mx-auto d-block"
+                    alt="Logo Benito Juárez"></span>
         </div>
         <div class="row-4 mr-5">
             <a class="navbar-brand"> <b>Desarrolladores:</b> Flores Danny, Osorio Carlos, Tapia Kevin </a>
@@ -164,13 +187,14 @@
         <div class="row-4">
             <div class="container">
                 <div class="row-4 mr-4">
-                    <span><img src="/assets/repositorio.png" style="width: 6rem; height: 6rem;" 
-                        href="https://github.com/JoelTapia99/Estadistica-proyecto"
-                        class="rounded mx-auto d-block" alt="Logo Benito Juárez"></span>
+                    <span><img src="/assets/repositorio.png" style="width: 6rem; height: 6rem;"
+                            href="https://github.com/JoelTapia99/Estadistica-proyecto" class="rounded mx-auto d-block"
+                            alt="Logo Benito Juárez"></span>
                 </div>
                 <div class="row-4">
                     <a href="https://github.com/JoelTapia99/Estadistica-proyecto" class="alert-link">
-                        <span class="badge badge-secondary" style="width: 100%; height: 4rem; font-size: 2rem;">Código fuente</span></a>
+                        <span class="badge badge-secondary" style="width: 100%; height: 4rem; font-size: 2rem;">Código
+                            fuente</span></a>
                 </div>
             </div>
         </div>
@@ -181,6 +205,15 @@
 
 </html>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-box-and-violin-plot@2.3.0/build/Chart.BoxPlot.min.js"></script>
 <script src="/main.js"></script>
