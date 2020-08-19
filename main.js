@@ -47,15 +47,19 @@ function agruparDatos(){
     if (datos.length >= 20){
         let rango = datos[datos.length-1] - datos[0];
         let numero_intervalos = Math.round(Math.sqrt(datos.length));
-        let amplitud = Math.round(rango/numero_intervalos);
-        let intervalo = datos[0] - Math.abs(rango - (numero_intervalos * amplitud));
+        let amplitud = rango/numero_intervalos;
+        let intervalo = datos[0];
+
+        if((rango - (numero_intervalos * amplitud)) >= 0){
+            intervalo -= (rango - (numero_intervalos * amplitud));
+        }
 
         for (let i = 0; i < numero_intervalos; i++){
             datos_agrupados.push({
-                dato: `[${intervalo} - ${intervalo + amplitud}]`,
-                frecuencia: datos.filter(num => (num >= intervalo && num <= intervalo + amplitud)).length
+                dato: `[${Math.round(intervalo*100)/100} - ${Math.round((intervalo + amplitud)*100)/100}]`,
+                frecuencia: datos.filter(num => (num >= intervalo && num < intervalo + amplitud)).length
             });
-            intervalo = intervalo + 1 + amplitud;
+            intervalo = intervalo + amplitud;
         }
     } else {
         for (let i = 0; i < datos.length; i++){
