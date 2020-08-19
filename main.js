@@ -57,7 +57,7 @@ function agruparDatos(){
         for (let i = 0; i < numero_intervalos; i++){
             datos_agrupados.push({
                 dato: `[${Math.round(intervalo*100)/100} - ${Math.round((intervalo + amplitud)*100)/100}]`,
-                frecuencia: datos.filter(num => (num >= intervalo && num < intervalo + amplitud)).length
+                frecuencia: datos.filter(num => (num >= intervalo && num <= intervalo + amplitud)).length
             });
             intervalo = intervalo + amplitud;
         }
