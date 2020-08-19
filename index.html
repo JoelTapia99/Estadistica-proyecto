@@ -87,29 +87,19 @@
         </div>
     </div>
 
-    <!-- medidias de tendencia central y dispersion -->
-    <div class="container">
-        <div class="jumbotron mt-0">
-
-            <ul class="nav nav-tabs mt-0" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#contenedor-medidas-datos"
-                        role="tab" aria-controls="home" style="color: black;" aria-selected="true">Medidas de tendencia central</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#contenedor-medidas-dispersion"
-                        role="tab" aria-controls="profile" style="color: black;" aria-selected="false">Medidas de dispersión</a>
-                </li>
-            </ul>
-
+    <!-- diagrama de tallo y hojas -->
+    <div class="container" id="contenedor-tallos-hojas">
+        <div class="jumbotron">
+            <h2 align="center">Gráfico de tallos y hojas.</h2>
+            <hr>
             <div class="container" id="datos-sin-tallos"></div>
 
             <table class="table">
                 <thead class="thead-dark" id="cabecera-tallos">
                     <!-- <tr>
-                        <th scope="col">Tallos</th>
-                        <th scope="col">Hojas</th>
-                    </tr> -->
+                    <th scope="col">Tallos</th>
+                    <th scope="col">Hojas</th>
+                </tr> -->
                 </thead>
                 <tbody id="cuerpo-tallos"></tbody>
             </table>
@@ -162,15 +152,22 @@
 
     </div>
 
-    <!-- medidias de tendencia central y dispersion -->
+    <!-- medidas de tendencia central y dispersion -->
     <div class="container">
         <div class="jumbotron mt-0">
 
-    <!-- diagrama de tallo y hojas -->
-    <div class="container" id="contenedor-tallos-hojas">
-        <div class="jumbotron">
-            <h2 align="center">Gráfico de tallos y hojas.</h2>
-            <hr>
+            <ul class="nav nav-tabs mt-0" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#contenedor-medidas-datos"
+                        role="tab" aria-controls="home" style="color: black;" aria-selected="true">Medidas de tendencia
+                        central</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#contenedor-medidas-dispersion"
+                        role="tab" aria-controls="profile" style="color: black;" aria-selected="false">Medidas de
+                        dispersión</a>
+                </li>
+            </ul>
 
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="contenedor-medidas-datos" role="tabpanel"
@@ -196,6 +193,7 @@
                 </div>
 
             </div>
+
         </div>
     </div>
 
