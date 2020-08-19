@@ -29,6 +29,10 @@ function graficarDiagramaLineas(datos_agrupados) {
             legend: {
                 display: false
             },
+            title: {
+                display: true,
+                text: 'Gráfico de puntos'
+            },
             elements: {
                 point: {
                     pointStyle: 'circle'
@@ -63,6 +67,10 @@ function graficarHistograma(datos_agrupados) {
             responsive: true,
             legend: {
                 display: false
+            },
+            title: {
+                display: true,
+                text: 'Histograma'
             }
         }
     });

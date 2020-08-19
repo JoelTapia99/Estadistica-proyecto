@@ -87,6 +87,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <!-- medidias de tendencia central y dispersion -->
     <div class="container">
         <div class="jumbotron mt-0">
@@ -101,6 +102,96 @@
                         role="tab" aria-controls="profile" style="color: black;" aria-selected="false">Medidas de dispersión</a>
                 </li>
             </ul>
+=======
+    <!-- diagrama de tallo y hojas -->
+    <div class="container" id="contenedor-tallos-hojas">
+        <div class="jumbotron">
+            <h2>Gráfico de tallos y hojas.</h2>
+            <hr>
+>>>>>>> 6ce76820d754010fcd241733e1b6e3e44eb74e28
+
+            <div class="container" id="datos-sin-tallos"></div>
+
+            <table class="table">
+                <thead class="thead-dark" id="cabecera-tallos">
+                    <!-- <tr>
+                        <th scope="col">Tallos</th>
+                        <th scope="col">Hojas</th>
+                    </tr> -->
+                </thead>
+                <tbody id="cuerpo-tallos"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- graficos -->
+    <div class="container" id="contenedor-grafica-datos">
+        <div class="jumbotron">
+            <h2 class="center">Gráficos Estadísticos</h2>
+            <hr>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- Gráfico de puntos -->
+                        <div class="container">
+                            <canvas id="grafico-puntos" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <!-- Histograma -->
+                        <div class="container">
+                            <canvas id="histograma" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <!-- Diagrama de caja -->
+                        <div class="container">
+                            <div class="jumbotron">
+                                <canvas id="diagrama-caja" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev bg-dark" href="#carouselExampleControls" role="button" data-slide="prev"
+                    style="border-radius: 100px; height: 80px; width: 80px;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next bg-dark" href="#carouselExampleControls" role="button" data-slide="next"
+                    style="border-radius: 100px; height: 80px; width: 80px;">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- medidias de tendencia central y dispersion -->
+    <div class="container">
+        <div class="jumbotron mt-0">
+
+<<<<<<< HEAD
+    <!-- diagrama de tallo y hojas -->
+    <div class="container" id="contenedor-tallos-hojas">
+        <div class="jumbotron">
+            <h2 align="center">Gráfico de tallos y hojas.</h2>
+            <hr>
+=======
+            <ul class="nav nav-tabs mt-0" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#contenedor-medidas-datos"
+                        role="tab" aria-controls="home" aria-selected="true">Medidas de tendencia central</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#contenedor-medidas-dispersion"
+                        role="tab" aria-controls="profile" aria-selected="false">Medidas de dispersión</a>
+                </li>
+            </ul>
+>>>>>>> 6ce76820d754010fcd241733e1b6e3e44eb74e28
 
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="contenedor-medidas-datos" role="tabpanel"
@@ -126,78 +217,6 @@
                 </div>
 
             </div>
-        </div>
-    </div>
-
-    <!-- graficos -->
-    <div class="container" id="contenedor-grafica-datos">
-        <div class="jumbotron">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active">
-                        <!-- Gráfico de puntos -->
-                        <div class="container">
-                            <h2 align="center">Gráfico de puntos</h2>
-                            <hr>
-                            <canvas id="grafico-puntos" width="400" height="200"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <!-- Histograma -->
-                        <div class="container">
-                            <h2 align="center">Histograma</h2>
-                            <hr>
-                            <canvas id="histograma" width="400" height="200"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <!-- Diagrama de caja -->
-                        <div class="container">
-                            <div class="jumbotron">
-                                <h2 align="center">Diagrama de caja</h2>
-                                <hr>
-                                <canvas id="diagrama-caja" width="400" height="200"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <a class="carousel-control-prev bg-dark" href="#carouselExampleControls" role="button" data-slide="prev"
-                    style="border-radius: 100px; height: 80px; width: 80px;">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next bg-dark" href="#carouselExampleControls" role="button" data-slide="next"
-                    style="border-radius: 100px; height: 80px; width: 80px;">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-
-    </div>
-
-
-    <!-- diagrama de tallo y hojas -->
-    <div class="container" id="contenedor-tallos-hojas">
-        <div class="jumbotron">
-            <h2 align="center">Gráfico de tallos y hojas.</h2>
-            <hr>
-
-            <div class="container" id="datos-sin-tallos"></div>
-
-            <table class="table">
-                <thead class="thead-dark" id="cabecera-tallos">
-                    <!-- <tr>
-                        <th scope="col">Tallos</th>
-                        <th scope="col">Hojas</th>
-                    </tr> -->
-                </thead>
-                <tbody id="cuerpo-tallos"></tbody>
-            </table>
         </div>
     </div>
 
